@@ -9,27 +9,33 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thilanka Munasinghe</title>
+    <title>Mechanical Engineering Thesis</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
-    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="../css/freelancer.css" rel="stylesheet">
+    <link href="../css/thumbnail-gallery.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+  	<style type="text/css" media="screen">
+  			body {counter-reset:section;}
+  			ol { counter-reset: item }
+			li {display: block;}
+			ol p{ font-size: 20px }
+			ol li p{ font-size: 18px }
+			ol li ol p{ font-size: 16px }
+			ol li ol li p{ font-size: 14px }
+			ol li ol li ol p{ font-size: 12px }
+			li:before { content: counters(item, ".") " "; counter-increment: item }
+			p{
+        		display:inline-block;}
+  	</style>
 </head>
 
 <body id="page-top" class="index">
@@ -45,245 +51,75 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Thilanka Munasinghe</a>
+                <a class="navbar-brand" href="#page-top">Mechanical Engineering Thesis</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Projects</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#teaching">Teaching</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/Thilanka_Profile_pic.png" alt="">
-                    <div class="intro-text">
-                        <!--<span class="name">Thilanka Munasinghe</span>-->
-                        <!-- <span class="skills">Aspiring AI Researcher - Android Programmer and Instructor - Aerospace Enthusiast</span> -->
-                        <hr class="star-light">
-                        
-                    </div>
-
-                </div>
-            </div>
-            <div class="row text-left">
-                <div class="col-lg-4">
-                    <p>I am a graduate student in Applied Mathematics and Mechanical Engineering at West Virginia University. I have a bachelors in Aerospace Engineering.</p>
-                   <!-- <p>I am passionate about financial mathematics and evolutionary computing research.</p>-->
-                </div>
-                <div class="col-lg-4">
-                    <p>I currently work as the android programming instructor at the WVU LaunchLab. In the past, I have been a visiting graduate research student at the MIT's Laboratory for Autonomous Marine Sensing Systems in Cambridge MA, and have worked as a graduate intern at the Information Research Corporation in Fairmont, WV. </p>
-                </div>
-                <div class="col-lg-4">
-                    <p>I am currently looking for a position in industry or at a research institution to start after my graduation in late 2015. </p>
-                    <p>If you have a job for me, please do drop me a line!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="Thilanka_Munasinghe_Resume.pdf" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download My Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
 
 <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Projects</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
+    <section id="toc">
+    	<div class="container">
+    		<ol>
+  				<li><a href=""><p><strong>Introduction</strong></p></a>
+    			</li>
+    			<li><a href=""><p><strong>Preliminary Methods Used for Image Processing</strong></p></a>
+    				<small>
+    				<ol>
+        				<li><a href=""><p><strong>Image Processing by using Matlab® “Image Processing Toolbox”</p></strong></a></li>
+         				<li><a href=""><p><strong>Types of Images Used In Image Processing</strong></p></a>
+         					<ol>
+        						<li><a href=""><p>Binary Images</p></a></li>
+        						<li><a href=""><p>Truecolor or RGB Images</p></a></li>
+        						<li><a href=""><p>Gray Scale Images or Intensity Images</p></a></li>
+        						<li><a href=""><p>Indexed Images</p></a></li>
+    						</ol>
+         				</li>
+		    			<li><a href=""><p><strong>Image Processing Procedure</strong></p></a>
+		    				<ol>
+		        				<li><a href=""><p>Reading Images</p></a></li>
+		        				<li><a href=""><p>Writing Images</p></a></li>
+		        				<li><a href=""><p>Cropping Images</p></a></li>
+		        				<li><a href=""><p>Converting True Color Images to Gray Scale Images</p></a></li>
+		        				<li><a href=""><p>Using the “imtool” Command to Explore the Image Data</p></a></li>
+		    				</ol>
+		    			</li>
+		     			<li><a href=""><p><strong>Displaying Sequence of Images</strong></p></a>
+		    			</li>
+		    			<li><a href=""><p><strong>Coordinate Systems</strong></p></a>
+		    				<ol>
+		        				<li><a href=""><p>Pixel Coordinate System</p></a></li>
+		        				<li><a href=""><p>Spatial Coordinate System</p></a></li>
+		    				</ol>
+		    			</li>
+		    			<li><a href=""><p><strong>Obtaining Coordinate Points of the Bubble Locations on the Image</strong></p></a></li>
+		    			<li><a href=""><p><strong>Importing Data from Excel Sheets to Matlab</strong></p></a></li>
+		    			<li><a href=""><p><strong>Results</strong></p></a></li>
+		    			<li><a href=""><p><strong>Conclusion</strong></p></a></li>
 
-            <div class='text-left'> <p>Here is a cross section of some of the ongoing projects and the projects I have done over the years. These projects range from experiments in micro-gravity to wearable android apps to financial modelling applications. Click on each project tag cloud to learn more.</p>
-            </div>
-                
-            </div>
-            <div class="row">
+    				</ol>
+    				</small>
+    			</li>
 
-                <!-- balloon satelite project -->
+    			<li><a href=""><p><strong>Methodology</strong></p></a>
 
-                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ballon_satellite_ICON.png" class="img-responsive" alt="">
-                    </a>
-                </div>
+    			<li><a href=""><p><strong>Experiment Apparatus</strong></p></a>
 
+    			<li><a href=""><p><strong>Image Processing Technique</strong></p></a>
 
-                <!-- micro-gravity -->
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
+    			<li><a href=""><p><strong>Results</strong></p></a>
 
-                        <img src="img/ZeroGMicrogravityProjectICON.png" class="img-responsive" alt="">
-                        
-                    </a>
-                </div>
+    			<li><a href=""><p><strong>Conclusion</strong></p></a>
 
-                <!-- uav -->
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                    
-                        <img src="img/GA_UAV_Project_ICON.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-
-                <!-- flightr -->
-
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/FlightR_project_ICON.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-
-
-                <!-- financial mathematics -->
-
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/Financial_Mathematics_ICON.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-
-                <!-- auv moos-ivp -->
-
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/MOOSIvP_PathPlannerProject_ICON.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-
-                <!-- google glass -->
-
-<!--                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/GoogleGlass_Classroom_project_ICON.png" class="img-responsive" alt="">
-                    </a>
-                </div>
- -->            </div>
-        </div>
-    </section>
-
-
-    <!-- Teaching Section -->
-    <section class="success" id="teaching">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Teaching</h2>
-                    <hr class="star-light">
-                    <div class="row">
-                        <div class="col-lg-12 text-left">
-                            <p>I enjoy teaching, and I have had lot of opportunities to teach at WVU, as a math tutor, Matlab, C++ and Java instructor, and currently as an android programming instructor at WVU Launchlab. In my spare time I create video tutorials to help my students, as well for anybody finds those topics difficult. Here are some of these videos that I have shared publicly.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 portfolio-item">
-                        <p>Differential Equations</p>
-                        <iframe src="https://www.youtube.com/embed/q300DOdebz8" frameborder="0" height="255" allowfullscreen></iframe>
-                        </div>
-                        <div class="col-sm-4 portfolio-item">
-                        <p>Android Studio</p>
-                        <iframe src="https://www.youtube.com/embed/IgwBLCF1QzE" frameborder="0" height="255" allowfullscreen></iframe>
-                        </div>
-                        <div class="col-sm-4 portfolio-item">
-                        <p>Intro to Robotics Platform Moos-IvP</p>
-                        <iframe src="https://www.youtube.com/embed/vl1VAsU07HA" frameborder="0" height="255" allowfullscreen></iframe>
-                        </div>
-                        
-                    </div> 
-                </div>
-
-            </div>
-            <div class="row">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                    <div class="footer-col col-md-4">
-                        <h3>Email</h3>
-                        <p><a href="mailto:munasinghe.thilanka@gmail.com">munasinghe.thilanka@gmail.com</a></p>
-                    </div>
- 
-                    <div class="footer-col col-md-4">
-                        <h3>Address</h3>
-                        <p>186 Sturgiss Street, Apt-2<br>Morgantown, WV-26506</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Telephone</h3>
-                        <p>+1-857-998-8767</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    			<!-- <li><a href=""><p><strong></strong></p></a>
+    				<ol>
+        				<li><a href=""><p></p></a></li>
+    				</ol>
+    			</li> -->
+    		</ol>
+		</div>
     </section>
 
     <!-- Footer -->
@@ -673,22 +509,22 @@
         </div>
     </div>
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="../js/freelancer.js"></script>
 
 </body>
 
