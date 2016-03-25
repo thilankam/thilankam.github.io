@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Thilanka Munasinghe">
+
+    <title>Thilanka Munasinghe | Google Summer of Code 2016 Proposal</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['1', 'Getting Familiar With the MIT AI code base', null,
+         new Date(2016, 3, 20), new Date(2016, 5, 31), null, 10, null],
+        ['2', 'Refining the Project with Mentors', null,
+         new Date(2016, 4, 01), new Date(2016, 4, 30), null, 0, null],
+        ['3', 'Devloping a Prototype', null,
+         new Date(2016, 5, 1), new Date(2016, 5, 23), null, 0, null],
+        ['4', 'Java Coding to create the Runtime Component', null,
+         new Date(2016, 5, 23), new Date(2016, 6, 15), null, 0, null],
+        ['5', 'Create the necessary Blockly Components', null,
+         new Date(2016, 6, 15), new Date(2016, 6, 31), null, 0, null],
+        ['6', 'Create Sample IoT Apps: Simple Robot', null,
+         new Date(2016, 7, 1), new Date(2016, 7, 7), null, 0, null],
+        ['7', 'Create Sample IoT Apps: Home Automation', null,
+         new Date(2016, 7, 8), new Date(2016, 7, 15), null, 0, null],
+        ['8', 'Create Sample IoT Apps: Disaster Management', null,
+         new Date(2016, 7, 16), new Date(2016, 7, 23), null, 0, null],
+        ['9', 'Fine-tune the AI Raspberry Pi Component', null,
+         new Date(2016, 6, 27), new Date(2016, 7, 31), null, 0, null],
+        ['10', 'Advanced Features: MQTT Implementation', null,
+         new Date(2016, 7, 23), new Date(2016, 8, 10), null, 0, null],
+        ['11', 'Advanced Features: MQTT Apps', null,
+         new Date(2016, 8, 10), new Date(2016, 8, 15), null, 0, null],
+        ['12', 'Documentation', null,
+         new Date(2016, 6, 15), new Date(2016, 8, 23), null, 0, null],
+        ['13', 'Testing', null,
+         new Date(2016, 6, 01), new Date(2016, 8, 23), null, 0, null],
+      ]);
+
+      var options = {
+        height: 400,
+        gantt: {
+          trackHeight: 30,
+           defaultStartDateMillis: new Date(2016, 3, 20)
+        }
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://summerofcode.withgoogle.com/">GSoC2016</a>
+                    </li>
+                    <li>
+                        <a href="http://appinventor.mit.edu/explore/">MIT App Inventor</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <br/>
+    <br/>
+    
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Thilanka Munasinghe's Application for GSoC 2016 <br/>
+                    <small>IoT: Raspberry Pi Integration with MIT App Inventor</small>
+                </h1>
+            </div>
+        </div>
+        <hr/>
+        <!-- /.row -->
+
+        <div class="row" id="interest">
+            <div class="col-md-12">
+                <h2>Interest in App Inventor</h2>
+                <p>I first learnt of MIT App Inventor when I was a visiting student at MIT. I learnt how easily I can prototype mobile apps with the framework, and have been using it ever since for developing my personal apps, as well as in the <a href="http://launch.wvu.edu/codelab">Android Programming class I teach</a>. It is such a great platform for developing computational thinking, and I am very eager to contribute to the effort.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <div class="row" id="">
+            <div class="col-md-12">
+                <h2>Interest in introductory programming</h2>
+                <p>I have been teaching at the <a href="http://launch.wvu.edu/codelab">WVU LaunchLab</a> as a codelab instructor for the past 1.5 years. I teach students who do not have prior mobile coding knowledge or even any programming experience to develop their own mobile apps. In my classroom sessions, I have <a href="codelab/mit_ai/">successfully utilized MIT App Inventor</a> to teach the fundamentals before delving into the Android Platform internals.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <div class="row" id="">
+            <div class="col-md-12">
+                <h2>Proposed summer project</h2>
+                
+                <p>I am interested in the <a href="https://github.com/mit-cml/appinventor-sources/wiki/Projects-GSoC-16#internet-of-things">Internet of Things</a> project, with a specialization on integrating Raspberry Pi with the MIT App Inventor Platform. Through this project I hope it would be easy to augment existing "dumb" devices and sensors to create new interactive capabilities and autonomous intelligence.</p>
+
+                <h3>Why me?</h3>
+
+                <p>I completed my bachelors in Aerospace Engineering, my Masters in Mechanical Engineering, and now I am pursuing a second Masters in Applied Mathematics at the West Virginia University. Coming from a multi disciplinary background, IoT is a special interest of mine. I have done several hobbyist projects utilizing the <a href="http://pi4j.com/">Pi4J Platform</a>. In addition, I have been using App Inventor in my introductory app development classes at WVU codelab. As part of my graduate studies, I have conducted lot of research on autonomous vehicles, which has even led to several journal publications as listed in <a href="resume.html">my resume</a>. Through this Google Summer of Code project, I hope to contribute good quality code to the MIT App Inventor project, and also hope this project will result in a research worthy outcome that will lead to a publication.</p>
+
+                <h3>Project Overview</h3>
+
+                <p> I am proposing to develop Raspberry Pi AI component that would allow the control of the pins in the Raspberry Pi device easily. Many of the existing libraries such as Pi4J provide a low level programming APIs to Raspberry Pi. However, I hope to provide a higher level abstraction to Raspberry Pi using App Inventor. This would provide a easy to use visual interface to program IoT applications.</p>
+
+                <h4>Supporting IoT Applications</h4>
+
+                <p>IoT applications come in various forms. However, when implemented with Raspberry Pi, they all have several key characteristics:
+                <ul>
+                    <li>General Purpose Inputs and Outputs</li>
+                    <li>Output state controlled with On/Off depending on:
+                    <ul>
+                    <li>The input state</li>
+                    <li>The processing outcome</li>
+                    </ul></li>
+                </ul>
+                </p>
+
+                <p>With the above core concepts in mind, I propose a Raspberry AI component that is able to:
+                <li><b>Designate</b> a given pin as an input or an output</li>
+                <li><b>Trigger</b> a callback on the state of the pin</li>
+                <li><b>Shutdown</b> a device attached a given pin</li>
+                <li><b>Serial communication</b> to a display port; for e.g. with UART (Serial/RS232) / SPI (Serial Peripheral Interface) / I<sup>2</sup>C (Inter Integrated Circuit)</li>
+                <li><b>Special Features</b> such as PWM (Pulse Width Modulation)</li>
+                <li><b>M2M</b> (machine to machine) capabiliites with the <a href="http://mqtt.org/">MQTT</a> protocol</li>
+                </p>
+
+               <h3>Implementation Plan</h3>
+
+               <p>The following gannt chart shows the rough timeline I have allocated to various aspects of the project. This is by no means the final time allocation, and with the guidance of the mentors I hope to update this if necessary.</p>
+
+               <p><div id="chart_div"></div></p>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row" id="">
+            <div class="col-md-12">
+                <h2>Experience with the development tools</h2>
+                <h3>Java</h3>
+                <p></p>
+
+                <h3>Javascript</h3>
+                <p></p>
+
+                <h3>Android Development with the Java SDK</h3>
+                <p></p>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row" id="">
+            <div class="col-md-12">
+                <h3>Experience with teams, online developer communities and large code bases
+</h3>
+                <h4>Describe what experience you’ve had working with other software developers and/or with large code bases.  This can include class projects and an excellent StackOverflow reputation.
+</h4>
+                <p></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row" id="">
+            <div class="col-md-12">
+                <h3></h3>
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+
+
+
+
+
+        
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Thilanka Munasinghe 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
