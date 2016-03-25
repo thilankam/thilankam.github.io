@@ -145,7 +145,7 @@
         <div class="row" id="2">
             <div class="col-md-12">
                 <h2>Interest in introductory programming</h2>
-                <p>I have been teaching at the <a href="http://launch.wvu.edu/codelab">WVU LaunchLab</a> as a codelab instructor for the past 1.5 years. I teach students who do not have prior mobile coding knowledge or even any programming experience to develop their own mobile apps. In my classroom sessions, I have <a href="codelab/mit_ai/">successfully utilized MIT App Inventor</a> to teach the fundamentals before delving into the Android Platform internals.</p>
+                <p>I have been teaching at the <a href="http://launch.wvu.edu/codelab">WVU LaunchLab</a> as a codelab instructor for the past 1.5 years. I teach students who do not have prior mobile coding knowledge or even any programming experience to develop their own mobile apps. In my classroom sessions, I have successfully utilized MIT App Inventor to teach the fundamentals before delving into the Android Platform internals. Here are some of the lesson plans I have used, some of which modified from the official AI tutorials: <a href="codelab/mit_ai/1.pdf">lesson 1</a>, <a href="codelab/mit_ai/2.pdf">lesson 2</a>, <a href="codelab/mit_ai/3.pdf">lesson 3</a>, <a href="codelab/mit_ai/4.pdf">lesson 4</a>, and <a href="codelab/mit_ai/5.pdf">lesson 5</a>.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -182,14 +182,14 @@
                 <li><b>Designate</b> a given pin as an input or an output</li>
                 <li><b>Trigger</b> a callback on the state of the pin</li>
                 <li><b>Shutdown</b> a device attached a given pin</li>
-                <li><b>Serial communication</b> to a display port; for e.g. with UART (Serial/RS232) / SPI (Serial Peripheral Interface) / I<sup>2</sup>C (Inter Integrated Circuit)</li>
+                <li><b>Serial communication</b> to a display port; for e.g. with UART (Serial/RS232) / SPI (Serial Peripheral Interface)</li>
                 <li><b>Special Features</b> such as PWM (Pulse Width Modulation)</li>
-                <li><b>M2M</b> (machine to machine) capabiliites with the <a href="http://mqtt.org/">MQTT</a> protocol</li>
+                <li><b>M2M</b> (machine to machine) capabilities with the <a href="http://mqtt.org/">MQTT</a> protocol</li>
                 </p>
 
                <h3>Implementation Plan</h3>
 
-               <p>The following gannt chart shows the rough timeline I have allocated to various aspects of the project. This is by no means the final time allocation, and with the guidance of the mentors I hope to update this if necessary.</p>
+               <p>The following diagram shows the rough time-line I have allocated to various aspects of the project. This is by no means the final time allocation, and with the guidance of the mentors I hope to update this if necessary.</p>
 
                <p><div id="chart_div"></div></p>
 
@@ -213,8 +213,8 @@
 
         <div class="row" id="5">
             <div class="col-md-12">
-                <h3>Experience with teams, online developer communities and large code bases
-</h3>
+                <h2>Experience with teams, online developer communities and large code bases
+</h2>
                 <p>I have contributed a smooth curve path planner to the <a href="http://oceanai.mit.edu/moos-ivp/pmwiki/pmwiki.php?n=Site.Download">MIT Moos IvP project</a> in C++. While working on this project, I learnt the importance of prompt and clear communication. Although I was the only one working on the specific project I was assigned to, I often saw lot of ideas come up during code design, implementation and code review process, which made my code all the more robust.</p>
             </div>
         </div>
@@ -222,7 +222,7 @@
 
         <div class="row" id="6">
             <div class="col-md-12">
-                <h3>Non Trivial Apps</h3>
+                <h2>Non Trivial Apps</h2>
 
                 <h4>I am in Class</h4>
                 <p>An app that puts the phone to silent mode as soon as the user toggles a switch, or enters a classroom as specified by a certain geo-fence. For any message that is received during the period, and automatic message as customized by the user will be sent.</p>
@@ -233,7 +233,7 @@
                 <p>| <a href="appInventorProjects/RecordMyLocation/RecordMyLocation.aia">AIA</a> | <a href="appInventorProjects/RecordMyLocation/RecordMyLocation.apk">APK</a> |</p>
                 
                 <h4>Mesh WV Game</h4>
-                <p>A simple game to record "cheering chants" during big game day, and play back to create nice sound effects.</p>
+                <p>A simple game to record "cheering chants" during big game day, and play back to create nice sound effects when the played back in large groups.</p>
                 <p>| <a href="appInventorProjects/meshWVgame/MeshWVgame.aia">AIA</a> | <a href="appInventorProjects/meshWVgame/MeshWVgame.aia">APK</a> |</p>
                 
             </div>
@@ -242,8 +242,41 @@
 
         <div class="row" id="7">
             <div class="col-md-12">
-                <h3>App Inventor Design Challenge</h3>
-                <p></p>
+                <h2>App Inventor Design Challenge</h2>
+                <h3>useFront Property</h3>
+                <p>According to <a href="https://github.com/mit-cml/appinventor-sources/issues/180">this issue</a>, "[the useFront] property relied on an undocumented feature of the android camera system". This feature has been removed from nearly all androids, including older ones including 2.3 devices. There exists no intent to specify which camera to use, and the user should decide what camera to use. Furthermore, according to <a href="https://github.com/mit-cml/appinventor-sources/pull/335#issuecomment-86684286">this comment</a>, App Inventor has always used an intent to launch the external camera app,
+and that intent does not have any way of specifying, and it definitely
+cannot query device state. Therefore, this property was removed from the AI design and block interfaces.</p>
+
+                <h3>Design Solution</h3>
+                <p>Properties To Be Added: <b>frontCamera</b>, <b>backCamera</b>, (and <b>externalCamera</b> if connected).</p>
+                <p>Methods To Be Added: <b>IsSelected</b>, TakePicture (already there)</p>
+
+                <h3>Implementation</h3>
+                <p>Due to the limitations across different APIs and devices in how selecting the camera upon intent passing, we might have to rewrite the existing Camera component. The source code for this component is available at: <a href="https://github.com/mit-cml/appinventor-sources/blob/master/appinventor/components/src/com/google/appinventor/components/runtime/Camera.java">appinventor/components/src/com/google/appinventor/components/runtime/Camera.java</a>.</p>
+
+                <p>According to the <a href="http://developer.android.com/reference/android/hardware/Camera.html#open(int)">Camera API documentation</a>, we can utilize the <b>open(int id)</b> method, where <b>id</b> refers to the camera the user has specified in the property list.</p>
+
+                <p>The SimpleFunction <b>TakePicture()</b> should be modified such that it would call camera = Camera.open(findFrontFacingCamera()) if the <b>frontCamera</b> property is set, where the <b>findFrontFacingCamera</b> is implemented as follows. Then we can call the Android API's <b>camera.takePicture()</b> method instead of launching the camera app via the intent. This is by no means the complete code, and I probably have overlooked some important things, but I sure hope this is in the right direction to achieve what is requested in the challenge. </p>
+
+                <pre>
+                    
+                    private int findFrontFacingCamera() {
+                        int cameraId = -1;
+                        // Search for the front facing camera
+                        int numberOfCameras = Camera.getNumberOfCameras();
+                        for (int i = 0; i < numberOfCameras; i++) {
+                          CameraInfo info = new CameraInfo();
+                          Camera.getCameraInfo(i, info);
+                          if (info.facing == CameraInfo.CAMERA_FACING_FRONT) {
+                            cameraId = i;
+                            break;
+                          }
+                        }
+                        return cameraId;
+                      }
+                </pre>
+                
             </div>
         </div>
         <!-- /.row -->
@@ -255,7 +288,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Thilanka Munasinghe 2016</p>
+                    <p>CC-BY Thilanka Munasinghe 2016</p>
                 </div>
             </div>
             <!-- /.row -->
