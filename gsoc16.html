@@ -43,38 +43,36 @@
 
       data.addRows([
         ['1', 'Getting Familiar With the MIT AI code base', null,
-         new Date(2016, 3, 20), new Date(2016, 5, 31), null, 10, null],
+         new Date(2016, 2, 20), new Date(2016, 4, 31), null, 10, null],
         ['2', 'Refining the Project with Mentors', null,
-         new Date(2016, 4, 01), new Date(2016, 4, 30), null, 0, null],
+         new Date(2016, 3, 01), new Date(2016, 3, 30), null, 0, null],
         ['3', 'Devloping a Prototype', null,
-         new Date(2016, 5, 1), new Date(2016, 5, 23), null, 0, null],
+         new Date(2016, 4, 1), new Date(2016, 5, 23), null, 0, null],
         ['4', 'Java Coding to create the Runtime Component', null,
-         new Date(2016, 5, 23), new Date(2016, 6, 15), null, 0, null],
+         new Date(2016, 4, 23), new Date(2016, 5, 15), null, 0, null],
         ['5', 'Create the necessary Blockly Components', null,
-         new Date(2016, 6, 15), new Date(2016, 6, 31), null, 0, null],
-        ['6', 'Create Sample IoT Apps: Simple Robot', null,
-         new Date(2016, 7, 1), new Date(2016, 7, 7), null, 0, null],
-        ['7', 'Create Sample IoT Apps: Home Automation', null,
-         new Date(2016, 7, 8), new Date(2016, 7, 15), null, 0, null],
-        ['8', 'Create Sample IoT Apps: Disaster Management', null,
-         new Date(2016, 7, 16), new Date(2016, 7, 23), null, 0, null],
-        ['9', 'Fine-tune the AI Raspberry Pi Component', null,
-         new Date(2016, 6, 27), new Date(2016, 7, 31), null, 0, null],
-        ['10', 'Advanced Features: MQTT Implementation', null,
-         new Date(2016, 7, 23), new Date(2016, 8, 10), null, 0, null],
-        ['11', 'Advanced Features: MQTT Apps', null,
-         new Date(2016, 8, 10), new Date(2016, 8, 15), null, 0, null],
-        ['12', 'Documentation', null,
-         new Date(2016, 6, 15), new Date(2016, 8, 23), null, 0, null],
-        ['13', 'Testing', null,
-         new Date(2016, 6, 01), new Date(2016, 8, 23), null, 0, null],
+         new Date(2016, 5, 15), new Date(2016, 6, 7), null, 0, null],
+        ['6', 'Create Sample IoT Apps: Home Automation', null,
+         new Date(2016, 6, 8), new Date(2016, 6, 15), null, 0, null],
+        ['7', 'Create Sample IoT Apps: Disaster Management', null,
+         new Date(2016, 6, 16), new Date(2016, 6, 23), null, 0, null],
+        ['8', 'Fine-tune the AI Raspberry Pi Component', null,
+         new Date(2016, 5, 27), new Date(2016, 6, 31), null, 0, null],
+        ['9', 'M2M Implementation using MQTT', null,
+         new Date(2016, 6, 23), new Date(2016, 7, 10), null, 0, null],
+        ['10', 'M2M App', null,
+         new Date(2016, 7, 10), new Date(2016, 7, 15), null, 0, null],
+        ['11', 'Documentation', null,
+         new Date(2016, 5, 15), new Date(2016, 7, 23), null, 0, null],
+        ['12', 'Testing', null,
+         new Date(2016, 5, 01), new Date(2016, 7, 23), null, 0, null],
       ]);
 
       var options = {
         height: 400,
         gantt: {
           trackHeight: 30,
-           defaultStartDateMillis: new Date(2016, 3, 20)
+           defaultStartDateMillis: new Date(2016, 2, 20)
         }
       };
 
@@ -94,15 +92,39 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Thilanka Munasinghe's Application for GSoC 2016 <br/>
+                <h1 class="page-header">Application for GSoC 2016 | <a href="http://thilankam.github.io">Thilanka Munasinghe</a> <br/>
                     <small>IoT: Raspberry Pi Integration with MIT App Inventor</small>
                 </h1>
+                <br/>
+                <h4>This proposal is available at: <a href="http://thilankam.github.io/gsoc16.html">http://thilankam.github.io/gsoc16.html</a></h4>
             </div>
         </div>
         <hr/>
         <!-- /.row -->
 
+      <div class="row" >
+            <div class="col-md-12">
+            <h2><span id="0">Proposal Outline</span></h2>
+            <ul>
+              <li><a href="#1">Interest in App Inventor</a></li>
+              <li><a href="#2">Interest in introductory programming</a></li>
+              <li><a href="#3">Proposed summer project</a>
+                <ul>
+                  <li><a href="#31">Why me?</a></li>
+                  <li><a href="#32">Project Overview</a></li>
+                  <li><a href="#33">Implementation Plan</a></li>
+                </ul>
+              </li>
+              <li><a href="#4">Experience with the development tools</a></li>
+              <li><a href="#5">Experience with teams, online developer communities and large code bases</a></li>
+              <li><a href="#6">Non Trivial Apps Developed</a></li>
+              <li><a href="#7">App Inventor Design Challenge</a></li>
+            </ul>
+                
+            </div>
+      </div>  
 
+<hr>
         <div class="row" >
             <div class="col-md-12">
                 <h2><span id="1">Interest in App Inventor</span></h2>
@@ -115,7 +137,9 @@
         <div class="row" id="2">
             <div class="col-md-12">
                 <h2>Interest in introductory programming</h2>
-                <p>I have been teaching at the <a href="http://launch.wvu.edu/codelab">WVU LaunchLab</a> as a codelab instructor for the past 1.5 years. I teach students who do not have prior mobile coding knowledge or even any programming experience to develop their own mobile apps. In my classroom sessions, I have successfully utilized MIT App Inventor to teach the fundamentals before delving into the Android Platform internals. Here are some of the lesson plans I have used, some of which modified from the official AI tutorials: <a href="codelab/mit_ai/1.pdf">lesson 1</a>, <a href="codelab/mit_ai/2.pdf">lesson 2</a>, <a href="codelab/mit_ai/3.pdf">lesson 3</a>, <a href="codelab/mit_ai/4.pdf">lesson 4</a>, and <a href="codelab/mit_ai/5.pdf">lesson 5</a>.</p>
+                <p>I have been teaching at the <a href="http://launch.wvu.edu/codelab">WVU LaunchLab</a> as a codelab instructor for the past 1.5 years. I teach students who do not have prior mobile coding knowledge or even any programming experience to develop their own mobile apps. In my classroom sessions, I have successfully utilized MIT App Inventor to teach the fundamentals before delving into the Android Platform internals.</p>
+
+                <p> Here are some of the lesson plans I have used, some of which modified from the official AI tutorials: <a href="http://thilankam.github.io/codelab/mit_ai/1.pdf">lesson 1</a>, <a href="http://thilankam.github.io/codelab/mit_ai/2.pdf">lesson 2</a>, <a href="http://thilankam.github.io/codelab/mit_ai/3.pdf">lesson 3</a>, <a href="http://thilankam.github.io/codelab/mit_ai/4.pdf">lesson 4</a>, and <a href="http://thilankam.github.io/codelab/mit_ai/5.pdf">lesson 5</a>.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -127,15 +151,15 @@
                 
                 <p>I am interested in the <a href="https://github.com/mit-cml/appinventor-sources/wiki/Projects-GSoC-16#internet-of-things">Internet of Things</a> project, with a specialization on integrating Raspberry Pi with the MIT App Inventor Platform. Through this project I hope it would be easy to augment existing "dumb" devices and sensors to create new interactive capabilities and autonomous intelligence.</p>
 
-                <h3>Why me?</h3>
+                <h3 id="31">Why me?</h3>
 
-                <p>I completed my bachelors in Aerospace Engineering, my Masters in Mechanical Engineering, and now I am pursuing a second Masters in Applied Mathematics at the West Virginia University. Coming from a multi disciplinary background, IoT is a special interest of mine. I have done several hobbyist projects utilizing the <a href="http://pi4j.com/">Pi4J Platform</a>. In addition, I have been using App Inventor in my introductory app development classes at WVU codelab. As part of my graduate studies, I have conducted lot of research on autonomous vehicles, which has even led to several journal publications as listed in <a href="resume.html">my resume</a>. Through this Google Summer of Code project, I hope to contribute good quality code to the MIT App Inventor project, and also hope this project will result in a research worthy outcome that will lead to a publication.</p>
+                <p>I completed my bachelors in Aerospace Engineering, my Masters in Mechanical Engineering, and now I am pursuing a second Masters in Applied Mathematics at the West Virginia University. Coming from a multi disciplinary background, IoT is a special interest of mine. I have done several hobbyist projects utilizing the <a href="http://pi4j.com/">Pi4J</a> Platform. In addition, I have been using App Inventor in my introductory app development classes at WVU codelab. As part of my graduate studies, I have conducted lot of research on autonomous vehicles, which has even led to several journal publications as listed in <a href="http://thilankam.github.io/resume/index.html">my resume</a>. Through this Google Summer of Code project, I hope to contribute good quality code to the MIT App Inventor project, and also hope this project will result in a research worthy outcome that will lead to a publication.</p>
 
-                <h3>Project Overview</h3>
+                <h3 id="32">Project Overview</h3>
 
-                <p> I am proposing to develop Raspberry Pi AI component that would allow the control of the pins in the Raspberry Pi device easily. Many of the existing libraries such as Pi4J provide a low level programming APIs to Raspberry Pi. However, I hope to provide a higher level abstraction to Raspberry Pi using App Inventor. This would provide a easy to use visual interface to program IoT applications.</p>
+                <p> I am proposing to develop Raspberry Pi AI component that would allow the control of the pins in the Raspberry Pi device easily. Many of the existing libraries such as <a href="http://pi4j.com/">Pi4J</a> provide a low level programming APIs to Raspberry Pi. However, I hope to provide a higher level abstraction to Raspberry Pi using App Inventor. This would provide a easy to use visual interface to program IoT applications.</p>
 
-                <h4>Supporting IoT Applications</h4>
+                <h4>Supporting the Basic IoT Capabilities</h4>
 
                 <p>IoT applications come in various forms. However, when implemented with Raspberry Pi, they all have several key characteristics:
                 <ul>
@@ -152,14 +176,38 @@
                 <li><b>Designate</b> a given pin as an input or an output</li>
                 <li><b>Trigger</b> a callback on the state of the pin</li>
                 <li><b>Shutdown</b> a device attached a given pin</li>
-                <li><b>Serial communication</b> to a display port; for e.g. with UART (Serial/RS232) / SPI (Serial Peripheral Interface)</li>
+                <li><b>Serial communication</b> to a display port; for e.g. with UART (Serial/RS232) or SPI (Serial Peripheral Interface)</li>
                 <li><b>Special Features</b> such as PWM (Pulse Width Modulation)</li>
                 <li><b>M2M</b> (machine to machine) capabilities with the <a href="http://mqtt.org/">MQTT</a> protocol</li>
                 </p>
 
-               <h3>Implementation Plan</h3>
+                <p>Based on the above criteria, the necessary properties and methods will be added to the MIT AI Raspberry Pi component.</p>
 
-               <p>The following diagram shows the rough time-line I have allocated to various aspects of the project. This is by no means the final time allocation, and with the guidance of the mentors I hope to update this if necessary.</p>
+                <h4>Testing and Evaluating the Component Developed</h4>
+
+                <p>Since IoT applications space is very broad, I would like to develop several sample applications using the newly created Raspberry Pi component. I have identified four different types of applications that I can develop. I am hoping to take an iterative approach to refine the component as new requirements get elicited when these sample apps are created.
+                <ul>
+                  <li><b>Home Automation Apps</b> such as:
+                    <ul>
+                      <li><b>Mail Notifier</b> that sends a text when you get physical mail from say, USPS.</li>
+                      <li><b>Driveway Alarm</b> to notifies you when someone enters your driveway.</li>
+                      <li><b>HVAC Control System</b> to control the temperature based on thermostat reading.</li>
+                      
+                    </ul>
+                  </li>
+                  <li><b>Disaster Management Apps</b> such as:
+                    <ul>
+                      <li><b>Fire Sensor</b> that Tweets and calls 911 when dangerous levels of smoke is detected.</li>
+                      <li><b>Flood Sensor</b> that Tweets and calls 911 when for example a basement is flooded.</li>
+                    </ul>
+                  </li>
+                  <li><b>Simple M2M App</b> that relays messages between several connected devices in a home.</li>
+                </ul>
+                </p>
+
+               <h3 id="33">Implementation Plan</h3>
+
+               <p>The following diagram shows the rough timeline I have allocated to various aspects of the project. This is by no means the final time allocation, and with the guidance of the mentors I hope to update this.</p>
 
                <p><div id="chart_div"></div></p>
 
@@ -172,10 +220,10 @@
                 <h2>Experience with the development tools</h2>
                 
                 <h3>Javascript</h3>
-                <p>The Javascript project that I am the most proud of is <a href="http://thilankam.github.io/flightR/">FlightR</a>. I completed this project as part of a hackathon, and won the Best Business/Project Idea and Most Technically Interesting Project Award at the Big Travel Data Hackathon 2013, organized by Hack Reduce. The project used the d3.js library.</p>
+                <p>The Javascript project that I am the most proud of is <a href="http://thilankam.github.io/flightR/">FlightR</a>. I completed this project as part of a hackathon, and <a href="http://traveldatahack.devpost.com/submissions/18191-flightr">won the Most Technically Interesting Project Award</a> at the Big Travel Data Hackathon 2013, organized by Hack Reduce. The project uses javascript and the d3.js library to visualize actual flight ticket prices and the search results for tickets in a given time period. It is designed to be user friendly and interactive! The tool provides a windowing method to correlate the date of the flight to the price and the time of the day it was taken. (<a href="http://thilankam.github.io/flightR/crossfilter.js">source code</a>)</p>
 
                 <h3>Android Development with the Java SDK</h3>
-                <p>I was an intern android developer for <a href="http://www.mylingoapp.com/">MyLingoApp</a>, a mobile app that lets movie goers enjoy their theatre experience in their language of choice. As part of this internship, I got the opportunity to work on Android Material Design, downloading large file sizes, and Android NDK for audio syncing. Furthermore, I have also developed, although not yet fully completed, android app for making Selfie Rap Videos (<a href="https://github.com/thilankam/SwayangVideo">source code</a>).</p>
+                <p>I was an intern android developer for <a href="http://www.mylingoapp.com/">MyLingoApp</a>, a mobile app that lets movie goers enjoy their theatre experience in their language of choice. As part of this internship, I got the opportunity to work on Android Material Design, downloading large file sizes, and Android NDK for audio syncing. Furthermore, I have also developed, though not yet fully completed, an android app for making Selfie Rap Videos (<a href="https://github.com/thilankam/SwayangVideo">source code</a>).</p>
 
             </div>
         </div>
@@ -183,29 +231,32 @@
 
         <div class="row" id="5">
             <div class="col-md-12">
-                <h2>Experience with teams, online developer communities and large code bases
-</h2>
-                <p>I have contributed a smooth curve path planner to the <a href="http://oceanai.mit.edu/moos-ivp/pmwiki/pmwiki.php?n=Site.Download">MIT Moos IvP project</a> in C++. While working on this project, I learnt the importance of prompt and clear communication. Although I was the only one working on the specific project I was assigned to, I often saw lot of ideas come up during code design, implementation and code review process, which made my code all the more robust.</p>
+                <h2>Experience with teams, online developer communities and large code bases</h2>
+                <p>I have contributed a smooth curve path planner to the <a href="http://oceanai.mit.edu/moos-ivp/pmwiki/pmwiki.php?n=Site.Download">MIT Moos IvP project</a> in C++. While working on this project, I learnt the importance of prompt and clear communication. Although I was the only one working on the specific project I was assigned to, I often saw lot of ideas come up during code design, implementation and code review process.</p>
             </div>
         </div>
         <!-- /.row -->
 
         <div class="row" id="6">
             <div class="col-md-12">
-                <h2>Non Trivial Apps</h2>
+                <h2>Non Trivial Apps Developed</h2>
 
                 <h4>I am in Class</h4>
                 <p>An app that puts the phone to silent mode as soon as the user toggles a switch, or enters a classroom as specified by a certain geo-fence. For any message that is received during the period, and automatic message as customized by the user will be sent.</p>
-                <p>| <a href="appInventorProjects/IamInClassRoom/IamInClassRoom.aia">AIA</a> | <a href="appInventorProjects/IamInClassRoom/IamInClassRoom.apk">APK</a> |</p>
+                <p>| <a href="http://thilankam.github.io/appInventorProjects/IamInClassRoom/IamInClassRoom.aia">AIA</a> | <a href="http://thilankam.github.io/appInventorProjects/IamInClassRoom/IamInClassRoom.apk">APK</a> |</p>
                 
                 <h4>Record My Location</h4>
                 <p>This app helps drivers remember where they parked in a busy parking lot. Simply press remember location, and upon return to the parking lot, the app will display the parked location on a map.</p>
-                <p>| <a href="appInventorProjects/RecordMyLocation/RecordMyLocation.aia">AIA</a> | <a href="appInventorProjects/RecordMyLocation/RecordMyLocation.apk">APK</a> |</p>
+                <p>| <a href="http://thilankam.github.io/appInventorProjects/RecordMyLocation/RecordMyLocation.aia">AIA</a> | <a href="http://thilankam.github.io/appInventorProjects/RecordMyLocation/RecordMyLocation.apk">APK</a> |</p>
+                
+                <h4>Let's Go Mountaineers</h4>
+                <p>A simple app to record "cheering chants" during big game day using text to speech, and play back to create nice sound effects when the played back in large groups.</p>
+                <p>| <a href="http://thilankam.github.io/appInventorProjects/letsGo/GoMountaineers.aia">AIA</a> | <a href="http://thilankam.github.io/appInventorProjects/letsGo/GoMountaineers.apk">APK</a> |</p>
                 
                 <h4>Mesh WV Game</h4>
-                <p>A simple game to record "cheering chants" during big game day, and play back to create nice sound effects when the played back in large groups.</p>
-                <p>| <a href="appInventorProjects/meshWVgame/MeshWVgame.aia">AIA</a> | <a href="appInventorProjects/meshWVgame/MeshWVgame.aia">APK</a> |</p>
-                
+                <p>A simple game.</p>
+                <p>| <a href="http://thilankam.github.io/appInventorProjects/meshWVgame/MeshWVgame.aia">AIA</a> | <a href="http://thilankam.github.io/appInventorProjects/meshWVgame/MeshWVgame.apk">APK</a> |</p>
+ 
             </div>
         </div>
         <!-- /.row -->
@@ -225,9 +276,10 @@ cannot query device state. Therefore, this property was removed from the AI desi
                 <h3>Implementation</h3>
                 <p>Due to the limitations across different APIs and devices in how selecting the camera upon intent passing, we might have to rewrite the existing Camera component. The source code for this component is available at: <a href="https://github.com/mit-cml/appinventor-sources/blob/master/appinventor/components/src/com/google/appinventor/components/runtime/Camera.java">appinventor/components/src/com/google/appinventor/components/runtime/Camera.java</a>.</p>
 
-                <p>According to the <a href="http://developer.android.com/reference/android/hardware/Camera.html#open(int)">Camera API documentation</a>, we can utilize the <b>open(int id)</b> method, where <b>id</b> refers to the camera the user has specified in the property list.</p>
+                <p>According to the <a href="http://developer.android.com/reference/android/hardware/Camera.html#open(int)">Camera API documentation</a>, we can utilize the <b>open(int id)</b> method of the <b>Camera</b> class, where <b>id</b> refers to the camera the user has specified in the property list.</p>
 
-                <p>The SimpleFunction <b>TakePicture()</b> should be modified such that it would call camera = Camera.open(findFrontFacingCamera()) if the <b>frontCamera</b> property is set, where the <b>findFrontFacingCamera</b> is implemented as follows. Then we can call the Android API's <b>camera.takePicture()</b> method instead of launching the camera app via the intent. This is by no means the complete code, and I probably have overlooked some important things, but I sure hope this is in the right direction to achieve what is requested in the challenge. </p>
+                <p>The SimpleFunction <b>TakePicture()</b> in the existing Camera AI component should be modified such that it would call <b>camera = Camera.open(findFrontFacingCamera())</b> if the <b>frontCamera</b> property is set, where the <b>findFrontFacingCamera</b> is implemented as follows. Then we can call the Android API's <b>camera.takePicture()</b> method instead of launching the camera app via the intent.</p>
+                <p>Note: This is by no means the complete code, and I probably have overlooked some important things, but I sure hope this is in the right direction to achieve what is requested in the challenge. </p>
 
                 <pre>
                     
