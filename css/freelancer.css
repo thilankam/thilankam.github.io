@@ -34,6 +34,7 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+
 }
 
 hr.star-light,
@@ -58,11 +59,11 @@ hr.star-primary:after {
 }
 
 hr.star-light {
-    border-color: #fff;
+    border-color: #000;
 }
 
 hr.star-light:after {
-    color: #fff;
+    color: #000;
     background-color: #18bc9c;
 }
 
@@ -81,7 +82,7 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
+    color: #000;
     background: #18bc9c;
 }
 
@@ -180,7 +181,7 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
+    color: #000;
     background: #18bc9c;
 }
 
@@ -253,9 +254,9 @@ section.success {
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #000;
     font-size: 20px;
-    color: #fff;
+    color: #000;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
