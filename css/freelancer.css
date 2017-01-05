@@ -16,7 +16,7 @@ p.small {
     font-size: 16px;
 }
 
-a{
+a.light {
     outline: 0;
     color: #FFFFFF;
 }
@@ -119,7 +119,7 @@ header .intro-text .skills {
     }
 }
 
-.dark {
+a.dark {
     color: #325394;
     text-decoration: underline;
 }
