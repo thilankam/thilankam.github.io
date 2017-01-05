@@ -123,6 +123,11 @@ header .intro-text .skills {
     }
 }
 
+.dark {
+    color: #325394;
+    text-decoration: underline;
+}
+
 @media(min-width:768px) {
     .navbar-fixed-top {
         padding: 25px 0;
