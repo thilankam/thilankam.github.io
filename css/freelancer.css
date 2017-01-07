@@ -16,7 +16,11 @@ p.small {
     font-size: 16px;
 }
 
-a.light {
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
     outline: 0;
     color: #FFFFFF;
 }
@@ -117,11 +121,6 @@ header .intro-text .skills {
     header .intro-text .skills {
         font-size: 1.75em;
     }
-}
-
-a.dark {
-    color: #325394;
-    text-decoration: underline;
 }
 
 @media(min-width:768px) {
@@ -254,9 +253,9 @@ section.success {
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #000;
     font-size: 20px;
-    color: #fff;
+    color: #000;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
