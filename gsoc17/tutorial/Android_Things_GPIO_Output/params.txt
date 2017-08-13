@@ -1,0 +1,7 @@
+ *******************************************
+ Please use the following values when configuring your MIT App Inventor App.
+ Board Identifier = 9a455811-7cff-4a70-b45a-0dd65fc220b7
+ Hardware Platform Board = iot_imx7d_pico
+ Messaging Host = iot.eclipse.org
+ Messaging Port = 1883
+ *******************************************
