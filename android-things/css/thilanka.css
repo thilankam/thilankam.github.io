@@ -1,0 +1,154 @@
+body {
+     font-family: 'Lato', sans-serif;
+        background-image: url(../img/thilanka-texture-grid.jpg);
+        background-attachment: fixed;
+        font-weight: 100;
+        background-size: 50%;
+}
+p {
+    font-size: 1em;
+/*    font-weight: 600;*/
+    
+}
+a, a:hover, a:focus, a:active, a.active {
+    color: #2692fe;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.navbar-fixed-top {
+    padding: 0.5em 0;
+    background: transparent;
+   font-family: 'Lato', sans-serif;
+/*    background: rgb(26,71,112);*/
+background: transparent;
+    background-size: 100%;
+/*    border-bottom: 1px solid  #0470b4;*/
+}
+.navbar-default .navbar-brand {
+    
+}
+.navbar.navbar-default.navbar-fixed-top.navbar-shrink {
+    background: #ffffff;;
+    padding: 0;
+    box-shadow: 0 0 44px rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar-brand {
+    display: none;
+}
+.navbar.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+    display: block;
+}
+header , section.success {
+    background: transparent;
+    text-align: left;
+}
+
+.portfolio {
+/*    background: rgb(84,138,176);*/
+ font-family: 'Lato', sans-serif;
+        background-image: url(../img/thilanka-texture-grid-2.jpg);
+        background-attachment: fixed;
+        font-weight: 100;
+        background-size: 100%;
+}
+.navbar-default .navbar-brand {
+    color: #0470b4;
+} 
+.navbar-default .navbar-nav > li > a {
+    color: #0470b4;
+}
+.intro h1 {
+    font-weight: 900;
+    color: #838383;
+    font-family: 'Lato', sans-serif;
+    text-transform: none;
+    font-size: 4em;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 2em;
+    line-height: 0.9em;
+/*    padding: 0;
+    margin: 0;*/
+    
+}
+
+section h2  {
+    font-weight: 200;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: none;
+    font-size: 4em;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 1em;
+    line-height: 0.9em;
+    display: inline-block;
+    width: 100%;
+    
+}
+.success h2 {
+    color: #686868;
+}
+
+.btn-outline {
+    background: rgb(84,138,176);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.intro p {
+    color: #555555;
+    font-size: 1.1em;
+    font-weight: 100;
+    line-height: 1.6em;
+}
+.intro p a {
+    color: #0470b4;
+    font-weight: 600;
+}
+.intro img {
+/*    width: 100%;*/
+}
+.cImgContainer {
+    text-align: left;
+}
+
+#portfolio p {
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 100;
+    line-height: 1.6em;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    border-bottom: 2px solid rgb(4,112,180);
+    background: transparent;
+    color: rgb(4,112,180);
+}
+.modal-body h2 {
+    padding: 1em 0;
+    
+}
+.modal-body h3 , .modal-body h4 {
+    padding: 0.5em 0;
+}
+
+.modal-body p , .modal-body  {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: left;
+}
+.footer-above h3 {
+/*    text-align: left;
+    width: 100%;*/
+}
+footer {
+    margin: 0;
+}
