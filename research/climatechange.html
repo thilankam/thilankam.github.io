@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Thilanka Munasinghe</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/freelancer.css" rel="stylesheet">
+    <link href="../css/thumbnail-gallery.css" rel="stylesheet">
+ 
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+ <link href="../css/thilanka.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Thilanka Munasinghe</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#about">About</a>
+                    </li>
+                    <li class="active">
+                        <a href="../index.html#portfolio">Research</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#teaching">Teaching</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#misc">Miscellaneous</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="modal-body">
+
+                    
+
+                    <h2>Identifying Vulnerable Healthcare Facilities Due to the Effects of Precipitation</h2>
+                 
+
+                    <h4 class="text-left">Project Overview</h4>
+                    <p class="text-left">  Healthcare facilities provide communities with access to health services. Unfortunately, natural hazards can 
+                        severely damage or cause temporary shutdowns of these facilities, disrupting the normal flow of day-to-day life. 
+                        As witnessed by the recent snowstorm and the subsequent power outages in Texas in February of 2021, damages 
+                        to these facilities resulted in the loss of human lives and a disruption in healthcare services. Flood, a natural hazard,
+                         affects healthcare facilities at large. The rainfall triggered flash floods in the state of Massachusetts inundated healthcare 
+                         facilities. This led to dozens of patients being transported to another hospital because of the hospital’s inability to function. 
+                         Infrastructure vulnerability poses a threat to many countries and regions of the world where extreme precipitation is a common factor.
+                        Changing climatic conditions such as increasing frequency and intensity of extreme precipitation results in increased flood risk, 
+                        thereby increasing the vulnerability of healthcare facilities. </p>
+                     <p>   
+                        Historical precipitation records provide a good estimate of the potential 
+                        areas of high risk, which then can be used to assist in  combating these infrastructural losses. Here, we explore the areas of 
+                        extreme precipitation using historical precipitation data  to identify vulnerable healthcare facilities across several states in the US.
+                          By applying several Machine Learning (ML) clustering algorithms such as K-Means, DBSCAN (Density-Based Spatial Clustering of 
+                          Applications with Noise), and Agglomerative clustering to identify areas of extreme vulnerability, the results showed high correlation 
+                          between extreme precipitation and high risk.
+                          We used precipitation data from the  <a href="https://www.nasa.gov/mission_pages/GPM/main/index.html">NASA Global Precipitation Mission (GPM)</a>. 
+                          Infrastructure data was obtained form
+                        
+                        <a href="https://hifld-geoplatform.opendata.arcgis.com/">Homeland Infrastructure Foundation-Level Data (HIFLD)</a> for 
+                         <a href="https://hifld-geoplatform.opendata.arcgis.com/datasets/hospitals/api">Hospital</a> ,
+                          <a href="https://hifld-geoplatform.opendata.arcgis.com/datasets/urgent-care-facilities/api"> Urgent Care Centers</a> ,
+                          <a href="https://hifld-geoplatform.opendata.arcgis.com/documents/pharmacies/explore">Pharmacies</a> ,
+                          <a href="https://hifld-geoplatform.opendata.arcgis.com/documents/geoplatform::kidney-dialysis-centers/explore"> Dialysis Center</a>
+                          Locations.  </p>
+
+                     <p>     When focusing on the South-Eastern United States, as this region has historically seen 
+                          extreme rainfall, we have found that different states experience different risks, impacted by precipitation received across months of a 
+                          given year. This further implies that other environmental factors would also play an important role while determining the risk of a given 
+                          healthcare facility (and the region overall) and would form the basis for our future work by incorporating  the landslide occurrence data 
+                          from Global Landslide Nowcasts from LHASA, a landslide nowcast model to better predict and rank high risk facilities. </p>
+                          
+                     <p>   
+                          We have implemented  an easy-to-use interactive dashboard highlighting poentially vulnerable infrastructures focusing on the South-Eastern part of the United States. At the momement we are integrating the other 
+                          regions of the United States to this dashboard, enabling local governments and administrations to identify potential areas of flooding and landslides.
+                     </p>     
+                        
+                          
+                          
+                          
+                          
+                        </p>
+
+                        <h3> <a href="http://www.floodindex.tech/index.html">Interactive Dashboard</a> </h3>
+
+
+
+                    <h3>Project Proposal Poster </h3>
+
+                    <div class="text-center">
+                        <!-- <div class="col-md-6">
+                            <a href="../img/app_inventor/app_inventor_components.png">
+                                <img class="img-responsive" src="../img/app_inventor/app_inventor_components.png" alt="App Inventor Component Diagram" />
+                            </a>
+                        </div> -->
+                        <div class="col-md-12">
+                            <a href="../img/ClimateChangeProposal.png" >
+                                <img class="img-responsive" src="../img/ClimateChangeProposal.png" alt="Crtical Infrastructure vulnerability Due to Precipitation" />
+                            </a>
+                        </div>
+                    </div>
+                    <br> </br>
+
+
+
+
+                    <h3>Poster Presented at ESIP (Earth Sceince Information Partners 2021 Summer) </h3>
+
+                    <p> This poster was presented at the 2021 Earth Science Information Partners (ESIP) Summer Meeting held virtually in July 2021. <a href="https://esip.figshare.com/articles/poster/Identifying_Vulnerable_Healthcare_Facilities_Due_to_Effects_of_Precipitation/14984313"> This poster is available in the ESIP archives.</a>
+                    </p> 
+
+                    <div class="text-center">
+                        <!-- <div class="col-md-6">
+                            <a href="../img/app_inventor/app_inventor_components.png">
+                                <img class="img-responsive" src="../img/app_inventor/app_inventor_components.png" alt="App Inventor Component Diagram" />
+                            </a>
+                        </div> -->
+                        <div class="col-md-12">
+                            <a href="../img/ClimateChangePosterESIP.pdf" >
+                                <img class="img-responsive" src="../img/ClimateChangePosterESIP.pdf" alt="Crtical Infrastructure vulnerability Due to Precipitation" />
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <object data="../img/ClimateChangePosterESIP.pdf" type="application/pdf" width="100%" height="800px"> 
+                        <p>It.</a></p>  
+                      </object>
+                      
+                      <div class="graph-outline">
+                        <object style="width:100%;" data="../img/ClimateChangePosterESIP.pdf" type="application/pdf">
+                        <embed src="../img/ClimateChangePosterESIP.pdf" type="application/pdf" />
+                        </object>
+                    </div>
+<!-- 
+                    <p class="text-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HecuphkD3ic" frameborder="0" allowfullscreen></iframe>
+                    </p> -->
+
+                    <!-- <h4 class="text-left">Code</h4>
+
+                    <p class="text-left">The main code repo for this project is appinventor-sources. 
+                        However, the integration of Raspberry Pi required me to create two additional repos to facilitate MIT App Inventor on the Raspberry Pi and to circumvent licensing issues due to a library used on the Raspberry Pi side of things.</p>
+
+                    <table class="table table-hover text-left">
+                        <thead>
+                          <tr>
+                            <th>Repositories</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="https://github.com/thilankam/appinventor-sources/tree/raspi">appinventor-sources raspi branch</a></td>
+                            <td>RaspberryPiServer and RaspberyPiPinClient MIT App Inventor Component Implementation</td>
+                          </tr>
+                          <tr>
+                            <td><a href="https://github.com/thilankam/AppInventorRaspberryPiCompanion">AppInventorRaspberryPiCompanion</a></td>
+                            <td>Code to supplement App Inventor Components on the Raspberry Pi Device</td>
+                          </tr>
+                          <tr>
+                            <td><a href="https://github.com/thilankam/RaspberryPiMqttMessages">RaspberryPiMqttMessages</a></td>
+                            <td>Internal MQTT Messaging Scheme shared by MIT App Inventor and Raspberry Pi</td>
+                          </tr>
+                        </tbody>
+                      </table> -->
+
+                    <h4 class="text-left"> American Geophysical Union (AGU) 2021 Fall Meeting Abstract Submission </h4>
+                    <p> We have submitted the current progress of this research project work to  <a href="https://agu.confex.com/agu/fm21/webprogrampreliminary/Paper994795.html">AGU 2021 Fall Meeting Abstract Submission</a>    </p> 
+
+                    <!-- <ul class="text-left">
+                        <li>
+                        Interest Driven Innovation: Internet of Things with Raspberry Pi and MIT App Inventor. Munasinghe. T, Byrne W.S, ACM HotMobile 2017, The 18th International Workshop on Mobile Computing Systems and Applications, Feb 2017. <i>(Submitted)</i>.
+                        </li>
+                    </ul>     -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="text-center success" id="contact">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>Contact Me</h3>
+                        <div class="footer-col col-md-4">
+                            <h4>Email</h4>
+                            <p><a href="mailto:thilankawillbe@gmail.com">thilankawillbe@gmail.com</a></p>
+                        </div>
+     
+                        <div class="footer-col col-md-4">
+                            <h4>Telephone</h4>
+                            <p><a href="tel:+18579988767">+1-857-998-8767</a></p>
+                        </div>
+
+                        <div class="footer-col col-md-4">
+                            <h4>Around the Web</h4>
+                            <p>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="https://www.facebook.com/thilankawillbe" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://plus.google.com/+ThilankaMunasinghe/posts" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/pub/thilanka-munasinghe/34/737/245" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/thilankam" class="btn-social btn-outline"><i class="fa fa-fw fa-github-square"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Thilanka Munasinghe 2017<br/>
+                        Design Credit: <a href="http://startbootstrap.com">Start Bootstrap</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/freelancer.js"></script>
+
+</body>
+
+</html>
