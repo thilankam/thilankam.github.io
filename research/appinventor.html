@@ -84,13 +84,299 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <div class="modal-body">
 
-                    
+                    <h2>
+                        IoT Application Development Using MIT AppInventor to Collect and Analyze Sensor Data
+                    </h2>
 
-                    <h2>Raspberry Pi Integration on the MIT App Inventor</h2>
+                    <p>   
+                        
+                        Outcome of this project was published as a conference paper in  <a href="https://bigdataieee.org/BigData2019/index.html">IEEE BigData2019 Conference</a>  in December, 2019, Los Angeles, USA. 
+
+                    </p>
+
+                    <h4> Download the conference paper here: <a href="https://ieeexplore.ieee.org/abstract/document/9006203"> IoT Application Development Using MIT App Inventor to Collect and Analyze Sensor Data </a> </h4>
+
+
+                    <h3 class="text-left">Project Overview</h3>
+
+                    <p>
+                        The rapid development of low-cost sensors, smart
+                        devices, communication networks, and learning algorithms has
+                        enabled data-driven decision making in large-scale systems.
+                        However, the development platforms for such Internet of Things
+                        (IoT) applications and collecting the data in a cohesive, yet simple
+                        manner is not very well understood. MIT App Inventor is
+                        an open-source, user-friendly interface to develop mobile applications and has been used by over ten million users worldwide.
+                        We have added IoT capability to the <a href="https://appinventor.mit.edu/">MIT App Inventor</a>  platform
+                        where people can build applications using various sensors and
+                        IoT platforms such as <a href="https://www.raspberrypi.org/">Raspberry Pi</a>  and <a href="https://developer.android.com/things/get-started">Android Things</a>  to
+                        collect the data through mobile applications. This poster paper
+                        presents a realization of easy to program IoT applications in
+                        the mobile application space with a focus on collecting data
+                        from the connected sensors. We have integrated the Android
+                        Things platform with the MIT App Inventor and introduced
+                        the existing MIT App Inventor community to the IoT based
+                        App development. This integration allows not only the seasoned
+                        developers, but also the novice developers to make interesting
+                        IoT applications with minimal programming knowledge.
+                    </p>
+
+                    <h3>
+                        MIT App Inventor
+                    </h3>
+
+                    <p>
+                        The <a href="https://appinventor.mit.edu/">MIT App Inventor</a>  is an open-source app-building platform that allows users to drag-and-drop visual objects to create
+                        an application that can run on the Android system as a means
+                        of democratizing mobile app development. Application behavior is provided by piecing together blocks in a visual blocksbased 
+                        programming language. MIT App Inventor is used by students, teachers, developers, hobbyists, and entrepreneurs
+                        to develop apps for collaboration, productivity, personal use,
+                        recreation, learning, social good, and community activism. The
+                        ease of use of the system as a tool for making has contributed
+                        to its success and over 10 million people have used MIT App
+                        Inventor worldwide to create 43 million projects.
+
+                    </p>
+
+                    <h3> 
+                        Android Things
+                    </h3>
+
+                    <p>
+                        The <a href="https://developer.android.com/things/get-started">Android Things</a> is a lightweight version of Android published by Google that can be flashed onto different hardware
+                        prototyping boards, such as the Raspberry Pi 3, Intel Edison,
+                        and NXP Pico i.MX7D. Android Things extends the core
+                        Android framework with additional APIs that allow apps to
+                        integrate with new types of hardware not found on mobile
+                        devices. Apps for embedded devices bring developers closer
+                        to hardware peripherals and drivers than phones and tablets.
+                        By integrating the IoT capabilities of Android Things with
+                        MIT App Inventor, we eliminate the need for heavy and
+                        complex programming code by simply enabling the visual and
+                        interactive block-based drag and drop programming tools to
+                        create IoT applications. In the case of input sensors connected
+                        to the Raspberry Pi device or any other Android Things
+                        supported device, the data from these sensors can be relayed
+                        to the phone app or to an external storage device for the post
+                        or real-time data analysis purposes to obtain useful insights
+                        to make decisions. The integration of these two technologies
+                        (MIT App Inventor and Android Things) with a simple, userfriendly environment enables a larger audience of developers
+                        to create applications that can collect a vast amount of data in
+                        the fast-growing IoT space.
+                    </p>
+
+                    <h3>
+                        MIT APP INVENTOR COMPONENTS FOR ANDROID THINGS
+                    </h3>
+
+                    <h4>
+                        Android Things Extension
+                    </h4>
+
+                    <p>
+                        We have created an App Inventor extension for Android
+                        Things. This extension includes the following four components
+                        that can be easily configured in an MIT App Inventor project.
+                        The main component necessary is the ‘AndroidThingsBoard’
+                        component. The devices connected to the board can be modeled using the peripheral components such as ‘AndroidThingsGPIO’ (Android Things General Purpose Input Output), ‘AndroidThingsPWM’(Android Things Pulse Width Modulation)
+                        and ‘AndroidThingsTemperatureSensor’(Temperature Sensor
+                        Component supporting Android Things).
+                    </p>
+
+                    <h4>
+                        Android Things Board
+                    </h4>
+
+                    <p>
+                        This is a non-visible MIT App Inventor component that
+                        models the Android Things Board. It is responsible for relaying messages between the IoT devices connected to the board
+                        and the MIT App Inventor app. In order to set up an Android
+                        Things board, first, we need to flash the Android Things Image
+                        to the board, and this is a one-time setup on the board that
+                        we need to complete. Depending on the type of board we are
+                        planning to use, we need to download and install the correct
+                        flash image. Make sure the board is connected to WiFi because
+                        otherwise, the IoT devices will not be able to communicate
+                        with the phone app.
+                    </p>
+
+                    <h4>
+                        Android Things Support App
+                    </h4>
+                    <p>
+                        The official MIT App Inventor distribution provides an
+                        Android app called the Companion App that supports realtime testing during development. In a similar vein, we have
+                        introduced a Support App that bridges MIT App Inventor
+                        and the Android Things standard development kit libraries to
+                        provide essential communication support between the mobile
+                        app and the Android Things supported device such as Raspberry Pi. A unique identifier is needed to tether the phone
+                        app and the device. For simplicity, this support app generates
+                        that identifier, which is cached in a file and reused to avoid
+                        having to enter a new identifier every time the framework is
+                        restarted. We use the Android Things App Inventor Support
+                        App to facilitate the sending and receiving of messages to
+                        and from MIT App Inventor apps that use the Android Things
+                        components
+                    </p>
+
+                    <h4>
+                        Setting up an MQTT Broker
+                    </h4>
+                    <p>
+                        To set up an Android Things Board as an MQTT broker,
+                        we recommend installing Mosquitto [7]. To control the devices
+                        and sensors connected to the Android Things Board via the
+                        Internet with this approach, the board must have a public IP
+                        address. Alternatively, we can use one of the public MQTT
+                        brokers, such as iot.eclipse.org. If we wish to secure the
+                        payloads, we must use SSL ports
+                    </p>
+
+                    <h4>
+                        App Inventor Component Configuration
+                    </h4>
+
+                    <p>
+                        Before using the AndroidThingsBoard component, you need
+                        to initialize the component with certain board parameters
+                        such as “identifier”, “hardwarePlatform,” “messagingHost,”
+                        “messagingPost” to make sure the board and the corresponding
+                        App Inventor component will work together as shown in the
+                        Figure 1.
+                    </p>
+
+                    <div class="text-center">
+                        <!-- <div class="col-md-6">
+                            <a href="../img/app_inventor/app_inventor_components.png">
+                                <img class="img-responsive" src="../img/app_inventor/app_inventor_components.png" alt="App Inventor Component Diagram" />
+                            </a>
+                        </div> -->
+                        <div class="col-md-12">
+                            <a href="../img/IoTAppInventorFigure1.png" >
+                                <img class="img-responsive" src="../img/IoTAppInventorFigure1.png" alt="IoT App Inventor Android Things Configuration" />
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                   
+                    </br>
+
+                    <p>
+                        Similarly, the client components such as the AndroidThingsGPIO, AndroidThingsPwm, and the AndroidThingsTemperatureSensor must be registered. 
+                        For example, Figure 2 shows
+                        the most important properties, events and methods of the
+                        AndroidThingsTemperatureSensor component.
+                    </p>
+
+                    <div class="text-center">
+                        <!-- <div class="col-md-6">
+                            <a href="../img/app_inventor/app_inventor_components.png">
+                                <img class="img-responsive" src="../img/app_inventor/app_inventor_components.png" alt="App Inventor Component Diagram" />
+                            </a>
+                        </div> -->
+                        <div class="col-md-12">
+                            <a href="../img/IoTAppInventorFigure2.png" >
+                                <img class="img-responsive" src="../img/IoTAppInventorFigure2.png" alt="Android Things Temperature Sensor Component" />
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                   
+                    </br>
+
+                    <h4>
+                        EXAMPLE APPLICATION THAT COLLECTS TEMPERATURE SENSOR DATA
+                    </h4>
+
+                    <p>
+                        One straightforward applications is monitoring the temperature of a room or any place remotely, which has many advantages. Temperature data can be collected using temperature
+                        sensors that are connected to the device. Similarly, we can
+                        monitor the temperature of the home, and turn on and off the
+                        air-conditioning or the heater as needed, remotely, only when required. The functionalities of the Application is to monitor
+                        the temperature. Figure 3 shows the Android Things temperature monitor Configuration.
+
+                        On the mobile phone, we introduce a button (Button1) that
+                        will start the temperature monitoring process. Once that button
+                        is pressed, the Android Things Temperature sensor will start
+                        monitoring the temperature. In the next step, as shown in
+                        Figure 4, we have introduced a simple process to change the
+                        color of the phone screen based on the temperature reading,
+                        which is shown in the Figure 5 We have introduced two
+                        temperature thresholds such as “Hot Threshold” and “Cold
+                        Threshold”. The mobile phone user can change the threshold
+                        values as desired. If the temperature value is higher than the
+                        user entered threshold value for Hot Temperature, then the
+                        mobile phone screen background color will change to the red
+                        color. If the current temperature reading from the sensor is
+                        below the cold threshold value, the screen background color
+                        will change to the blue color, and if the sensor reading value
+                        is in between the hot and cold temperature threshold values,
+                        then the phone background color will change to green.
+
+                    </p>
+
+                    <div class="text-center">
+                        <!-- <div class="col-md-6">
+                            <a href="../img/app_inventor/app_inventor_components.png">
+                                <img class="img-responsive" src="../img/app_inventor/app_inventor_components.png" alt="App Inventor Component Diagram" />
+                            </a>
+                        </div> -->
+                        <div class="col-md-12">
+                            <a href="../img/IoTAppInventorFigure3.png" >
+                                <img class="img-responsive" src="../img/IoTAppInventorFigure3.png" alt="Android Things Temperature Monitor" />
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                   
+                    </br>
+
+                    <div class="text-center">
+                        <!-- <div class="col-md-6">
+                            <a href="../img/app_inventor/app_inventor_components.png">
+                                <img class="img-responsive" src="../img/app_inventor/app_inventor_components.png" alt="App Inventor Component Diagram" />
+                            </a>
+                        </div> -->
+                        <div class="col-md-12">
+                            <a href="../img/IotAppInventorFigure4.png" >
+                                <img class="img-responsive" src="../img/IoTAppInventorFigure4.png" alt="Android Things Temperature Sensor Component" />
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                   
+                    </br>
+
+                    <h3>
+                        Conclusion
+                    </h3>
+
+                    <p>
+                        This research paper presented in the IEEE BigData Conference shows the novel design and
+                        implementation of Android Things integration with the MIT
+                        App Inventor and demonstrated the viability of the technology
+                        using a sample app. The integration of the two technologies
+                        enables Interest Driven Innovation in the fast-growing IoT
+                        space. The simplicity and user-friendliness of using MIT
+                        App Inventor components make IoT applications to empower
+                        ordinary people to become innovators. As a result of that, a
+                        new frontier of innovators will emerge as their interests grow
+                        on solving problems, finding suitable data driven solutions to
+                        problems they face in their day to day lives. More information
+                        on these IoT sensors is available at http://thilankam.github.io/
+                        mit-app-inventor.
+                    </p>
+
+
+                
+
+
+                    <h2>Initial Work: Raspberry Pi Device Integration on the MIT App Inventor</h2>
                  
 
-                    <h4 class="text-left">Project Overview</h4>
-                    <p class="text-left">The purpose of this project was to control the pins of the Raspberry Pi easily using an android device. To achieve this, I created two MIT App Inventor components: the “RaspberryPiServer” and the “RaspberryPiPinClient”. The “RaspberryPiServer” models the RaspberryPi board, whereas the “RaspberryPiPinClient”  models Raspberry Pi’s low level Digital Interfaces known as GPIO (General Purpose Input and Output) pins using a higher level programming abstraction offered by MIT App Inventor utilizing the <a href="http://mqtt.org/">MQTT protocol</a>.</p>
+                    
+                    <p class="text-left">The purpose of this project was to control the pins of the Raspberry Pi easily using 
+                        an android device. To achieve this, I created two MIT App Inventor components: the “RaspberryPiServer” and the “RaspberryPiPinClient”. The “RaspberryPiServer” models the RaspberryPi board, whereas the “RaspberryPiPinClient”  models Raspberry Pi’s low level Digital Interfaces known as GPIO (General Purpose Input and Output) pins using a higher level programming abstraction offered by MIT App Inventor utilizing the <a href="http://mqtt.org/">MQTT protocol</a>.</p>
 
 
                     <p class="text-left">As an example, these two components allow anyone to create a simple DIY home automation  Raspberry Pi project such as turning any appliance in their home on or off remotely using their android device at a fraction of the cost of many commercial products available today. The coding required on App Inventor is shown on the left hand side and the setup required on the Raspberry Pi is shown on the right hand side.</p>
@@ -116,7 +402,8 @@
 
                     <h4 class="text-left">Code</h4>
 
-                    <p class="text-left">The main code repo for this project is appinventor-sources. However, the integration of Raspberry Pi required me to create two additional repos to facilitate MIT App Inventor on the Raspberry Pi and to circumvent licensing issues due to a library used on the Raspberry Pi side of things.</p>
+                    <p class="text-left">The main code repo for this project is appinventor-sources. 
+                        However, the integration of Raspberry Pi required me to create two additional repos to facilitate MIT App Inventor on the Raspberry Pi and to circumvent licensing issues due to a library used on the Raspberry Pi side of things.</p>
 
                     <table class="table table-hover text-left">
                         <thead>
@@ -141,12 +428,14 @@
                         </tbody>
                       </table>
 
-                    <h4 class="text-left">Publications</h4>
+                    <h4 class="text-left">Publication:</h4>
 
                     <ul class="text-left">
-                        <li>
-                        Interest Driven Innovation: Internet of Things with Raspberry Pi and MIT App Inventor. Munasinghe. T, Byrne W.S, ACM HotMobile 2017, The 18th International Workshop on Mobile Computing Systems and Applications, Feb 2017. <i>(Submitted)</i>.
-                        </li>
+                        
+                        <p> <h4>
+                            Additional details about this research project can be found in the <a href="https://ieeexplore.ieee.org/abstract/document/9006203">published research paper</a>.
+                        </h4>  </p>
+
                     </ul>    
                 </div>
             </div>
@@ -199,7 +488,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Thilanka Munasinghe 2017<br/>
+                        Copyright &copy; Thilanka Munasinghe 2021<br/>
                         Design Credit: <a href="http://startbootstrap.com">Start Bootstrap</a>
 
                     </div>
