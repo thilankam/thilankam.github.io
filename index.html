@@ -2,7 +2,137 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thilanka Munasinghe - Professional Portfolio">
+    <meta name="author" content="Thilanka Munasinghe">
 
+    <title>Thilanka Munasinghe</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/navnbar-fixed-size.css" rel="stylesheet">
+
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="css/thilanka.css" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box }
+        body { font-family: 'Lato', Verdana, sans-serif; }
+        .mySlides { display: none }
+        .slideshow-container { max-width: 1000px; position: relative; margin: auto; }
+        .text { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: 100%; text-align: center; }
+        .dot { height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+        .active { background-color: #717171; }
+        .fade { animation-name: fade; animation-duration: 1.5s; }
+        @keyframes fade { from { opacity: .4 } to { opacity: 1 } }
+        @media only screen and (max-width: 300px) { .text { font-size: 11px } }
+    </style>
+</head>
+
+<body id="page-top" class="index">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Thilanka Munasinghe</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li class="page-scroll"><a href="#about">About</a></li>
+                    <li class="page-scroll"><a href="#publications">Publications</a></li>
+                    <li class="page-scroll"><a href="#portfolio">Research</a></li>
+                    <li class="page-scroll"><a href="#teaching">Teaching</a></li>
+                    <li class="page-scroll"><a href="#misc">Miscellaneous</a></li>
+                    <li class="page-scroll"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="success" style="padding-top: 100px;">
+        <div id="about" class="container">
+            <div class="row">
+                <div class="container intro">
+                    <div class="col-sm-12 col-md-4 cImgContainer" style="overflow: hidden;">
+                        <img src="img/Thilanka_Profile_pic-3.png" alt="Profile Picture" style="width: 100%; height: auto; object-fit: cover;"/>
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-8">
+                        <h1>Thilanka<br/>Munasinghe</h1>
+                        <p>I'm developing Quantum Machine Learning applications using the RPI's 127-qubits IBM Quantum System One at the Future of Computing Institute (FOCI) at <a href="https://rpi.edu">Rensselaer Polytechnic Institute</a>.</p>
+                        
+                        <p>From 2018-2024, I was a lecturer at the <a href="https://science.rpi.edu/itws">Information Technology and Web Science Program</a>. I taught the following courses:</p>
+                        <ul>
+                            <li>Data Science (ITWS 6350, CSCI 6350, ERTH 6350)</li>
+                            <li>Data Analytics (ITWS 6600, MATP 4450)</li>
+                            <li>Xinformatics (ITWS 6400, ERTH 6400)</li>
+                        </ul>
+
+                        <p>Before joining RPI, I worked at the <a href="http://launch.wvu.edu/">WVU LaunchLab</a> as the CodeLab instructor.</p>
+
+                        <p><b>News articles related to my teaching and research:</b></p>
+                        <ul>
+                            <li><a href="https://everydaymatters.rpi.edu/advancing-dengue-research-during-a-global-pandemic/">Advancing Dengue Research During a Global Pandemic</a></li>
+                            <li><a href="https://news.rpi.edu/approach/2022/11/10">RPI News Article</a> on collaboration with <a href="https://www.ornl.gov/">Oak Ridge National Laboratory (ORNL)</a></li>
+                        </ul>
+                        
+                        <div class="text-center">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aq1bf9HX0YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+
+                        <hr>
+                        <p>I have contributed to <a href="http://appinventor.mit.edu/explore/">MIT App Inventor</a> through GSoC:</p>
+                        <ul>
+                            <li><a href="http://thilankam.github.io/mit-app-inventor/#/raspberrypi/intro">GSoC 2016: Raspberry Pi integration</a></li>
+                            <li><a href="http://thilankam.github.io/mit-app-inventor/#/androidthings/intro">GSoC 2017: Android Things integration</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+            if(slides.length > 0) {
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 3000); 
+            }
+        }
+        window.onload = showSlides;
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -247,7 +377,7 @@ body {font-family: Verdana,sans-serif;}
             </div>
             
         </div>
-    </header>
+    </header> -->
 
 
 <!-- <!-- Publication List Section -->
